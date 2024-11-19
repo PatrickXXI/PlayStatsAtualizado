@@ -1,4 +1,3 @@
-// Parte de back end
 const Login = require('../model/login');
 const rota = '/login'; // defininfdo a rota de login
 
@@ -7,7 +6,7 @@ module.exports = app => { //aqui dentro fica minha rota
         Login.lista(res);
     });
     app.get((rota+'/:id'), (req,res)=>{
-        let id = parseInt(red.params.id);
+        let id = parseInt(req.params.id);
         Login.buscaPorId(id, res);
     })
     
@@ -23,13 +22,21 @@ module.exports = app => { //aqui dentro fica minha rota
 
     app.post('/autentica', (req, res) => {
         const { email, senha } = req.body;
-    
+      
         // Verifica se os campos foram preenchidos
         if (!email || !senha) {
             return res.status(400).json({ success: false, message: 'Email e senha são obrigatórios' });
         }
-    
+      
         // Chama o método de autenticação
         Login.autentica(email, senha, res);
-    })
+    });
+    app.get('/buscarTime', (req, res) => {
+        const { nome } = req.query;  // Parâmetro de consulta para o nome do time
+        if (!nome) {
+            return res.status(400).json({ success: false, message: 'O nome do time é obrigatório.' });
+        }
+        Login.buscaTimes(nome, res);  // Chama o método de busca de times
+        
+    });
 }

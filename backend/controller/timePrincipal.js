@@ -2,7 +2,7 @@ const TimePrincipal = require('../model/timePrincipal');
 const rota = '/timePrincipal'; // defininfdo a rota de login
 
 module.exports = app => { //aqui dentro fica minha rota
-    app.get(rota, (req, res)=>{
+    /*app.get(rota, (req, res)=>{
         TimePrincipal.lista(res);
     });
     app.get((rota+'/:id'), (req,res)=>{
@@ -19,5 +19,5 @@ module.exports = app => { //aqui dentro fica minha rota
         let valores = req.body; //Pegando todos os valores
         TimePrincipal.altera(id, valores, res);
     })
-
+    */
 }

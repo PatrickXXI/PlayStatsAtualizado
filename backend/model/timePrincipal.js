@@ -1,7 +1,7 @@
 const conexao = require('../infra/connection');
 
 class TimePrincipal{
-    adiciona(timePrincipal, res){
+    /*adiciona(timePrincipal, res){
         let sql = 'INSERT INTO timePrincipal SET ?'
         conexao.query(sql, timePrincipal,(erro, resultado)=>{
             if(erro){
@@ -47,5 +47,5 @@ class TimePrincipal{
         })
     }
 
-}
+*/}
 module.exports = new TimePrincipal; 

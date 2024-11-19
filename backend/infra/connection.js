@@ -6,7 +6,7 @@ const conexao = mysql.createConnection({
     user:"root",
     password:"", // senha a definir
     port: 3306, // ir atras 
-    database:"playstatssql" // nome do banco que irei criar
+    database:"playstatsbanco" // nome do banco que irei criar
 });
 
 module.exports = conexao;
