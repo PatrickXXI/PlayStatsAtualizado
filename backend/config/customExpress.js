@@ -11,7 +11,7 @@ module.exports = () => {
     app.use(bodyParser.json());
 
     // Inclui automaticamente as rotas da pasta 'controller' no app, usando o Consign
-    consign().include('controller').into(app);
+    //consign().include('controller').into(app);
 
     return app;
 };

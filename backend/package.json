@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":"nodemon index.js"
+    "server": "nodemon index.js"
   },
   "author": "Patrick",
   "license": "ISC",
@@ -14,7 +14,9 @@
     "consign": "^0.1.6",
     "express": "^4.21.1",
     "express-form-data": "^2.0.23",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
